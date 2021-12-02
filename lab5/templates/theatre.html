@@ -1,0 +1,25 @@
+{% extends 'basetheatre.html' %}
+{% load static %}
+
+{% block head %}Информация о театре № {{ data.theatre.id }}{% endblock %}
+
+{% block title %}Информация о театре № {{ data.theatre.id }}{% endblock %}
+
+{% block picture %}
+     <ul>
+            {% if data.theatre.id == 1 %}
+                <img src= "{% static 'img/p_1.png' %}" width="200" height="100">
+            {% elif data.theatre.id == 2 %}
+                <img src="/static/img/p_2.png" width="200" height="100">
+            {% elif data.theatre.id == 3 %}
+                <img src="/static/img/p_3.png" width="200" height="100">
+            {% endif %}
+    </ul>
+{% endblock %}
+
+{% block description %}
+    <ul>
+         <li>{{ data.theatre.discription }}</li>
+    </ul>
+{% endblock %}
+
