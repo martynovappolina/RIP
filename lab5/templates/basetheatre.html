@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+    <title>{% block head %}{% endblock %}</title>
+</head>
+<table>
+    <tbody>
+        <caption>{% block title %}{% endblock %}</caption>
+        <tr>
+            <th>Вид театра</th>
+            <th>Описание театра</th>
+        </tr>
+        <tr>
+            <td>{% block picture %}{% endblock %}</td>
+            <td>{% block description %}{% endblock %}</td>
+        </tr>
+        <tr>
+            <td><input type=button value="Назад" onClick="javascript:history.go(-1);"></td>
+        </tr>
+    </tbody>
+</table>
+</html>
