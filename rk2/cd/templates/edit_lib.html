@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>edit lib</title>
+</head>
+<body class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Введите название библиотеки</label><br>
+            <input type="text" name="name" value="{{lib.name}}" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+</body>
+</html>
